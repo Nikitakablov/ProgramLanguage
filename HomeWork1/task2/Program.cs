@@ -7,12 +7,17 @@ int ReadInt(string message)
     int value = Convert.ToInt32(Console.ReadLine()); 
     return value;
 }
-int number = ReadInt("Введите число: ");
-if (number >= 100) 
+int theardDigit(int number)
 {
     while (number >= 1000)
     number /= 10;
     int last = number % 10;
+    return last;
+}
+int number = ReadInt("Введите число: ");
+if (number >= 100) 
+{
+    int last = theardDigit(number);
     Console.Write($"третья цифра числа {number} равна {last}: ");
 }
 else {
