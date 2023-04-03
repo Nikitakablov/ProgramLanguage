@@ -1,23 +1,24 @@
 ﻿// Напишите программу, которая выводит третью цифру
 // заданного числа или сообщает, что третьей цифры нет.
 Console.Clear();
-Console.Write("Введите число: ");
-int number = int.Parse(Console.ReadLine());
-int number3 = number % 10;
-if (number3 == 0) 
+int ReadInt(string message)
 {
-     Console.Write("нет третий цыфры: ");
+    Console.Write($"{message} > "); // ввод приглашения
+    int value = Convert.ToInt32(Console.ReadLine()); 
+    return value;
+}
+int number = ReadInt("Введите число: ");
+if (number >= 100) 
+{
+    while (number >= 1000)
+    number /= 10;
+    int last = number % 10;
+    Console.Write($"третья цифра числа {number} равна {last}: ");
 }
 else {
-    Console.Write($"Третья цыфра числа {number3} ");
+    Console.Write($"Третья цыфра числа нет ");
 }
 
-// int ReadInt(string message)
-// {
-//     Console.Write(message);
-//     int value = Convert.ToInt32(Console.ReadLine());
-//     return value;
-// }
 // int number = ReadInt("Введите число: ");
 // int LastDigit = number % 10;
 // Console.WriteLine($"последняя цифра числа {number} равна {LastDigit}");
