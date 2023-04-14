@@ -5,7 +5,7 @@
 Console.Clear();
 int[] CreatArray()
 {
-    int[] array = new int[5];
+    int[] array = new int[4];
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = new Random().Next(-99, 100);
@@ -23,7 +23,7 @@ void PrintArray(int[] array)
 int SumElement(int[] array)
 {
     int sum = 0;
-    for (int i = 1; i < array.Length; i += 2)
+    for (int i = 0; i < array.Length; i += 2)
     {
         sum += array[i];
     }
