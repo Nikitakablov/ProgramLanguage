@@ -36,7 +36,7 @@ double[] Reverse(double[]array)
     }
     return array;
 }
-int len = ReadInt("Кол-во элементов массива > ");
+double len = ReadInt("Кол-во элементов массива > ");
 int minLimit = ReadInt("Минимальное случайное значение  > ");
 int maxLimit = ReadInt("Максимальное случайное значение > ");
 double[] array = GenerateArray(len, minLimit, maxLimit);
