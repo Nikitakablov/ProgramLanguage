@@ -10,7 +10,7 @@ int ReadInt(string massage)
 }
 int SumNaturalNum(int current, int N)
 {
-    if (current > N)
+    if (current == N)
         return 0;
     return current + SumNaturalNum(current + 1,N);
 }
