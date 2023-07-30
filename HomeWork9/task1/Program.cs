@@ -11,7 +11,9 @@ int ReadInt(string massage)
 void EvenNumbers(int current, int N)
 {
     if (current > N)
-    return;
+    {
+        return;
+    }
     if (current % 2 == 0)
     {
         System.Console.WriteLine(current);
